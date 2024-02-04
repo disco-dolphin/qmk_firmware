@@ -183,18 +183,18 @@ bool oled_task_user(void) {
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         if (clockwise) {
-            tap_code(KC_VOLD);
-        } else {
             tap_code(KC_VOLU);
+        } else {
+            tap_code(KC_VOLD);
         }
     } else if (index == 1) {
         if (clockwise) {
-            tap_code(KC_PGDN);
+            tap_code(KC_WH_R);
         } else {
-            tap_code(KC_PGUP);
+            tap_code(KC_WH_L);
         }
     }
-    return true;
+    return false;
 }
 
 #endif
